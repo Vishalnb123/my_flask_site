@@ -1,0 +1,13 @@
+
+Name: Alice
+Email: alice@example.com
+Message: Interested in your services.
+---
+Name: Bob
+Email: bob@example.com
+Message: Please contact me with more details.
+---
+Name: Charlie
+Email: charlie@example.com
+Message: Looking forward to working with you.
+---

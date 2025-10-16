@@ -1,4 +1,3 @@
-
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -16,5 +15,6 @@ def contact():
         return f"Thank you, {name}. We received your message."
     return render_template('contact.html')
 
+# Only include one app.run block
 if __name__ == '__main__':
     app.run(debug=True)

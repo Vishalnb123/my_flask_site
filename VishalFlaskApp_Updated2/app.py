@@ -1,10 +1,12 @@
-
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
+    name = "Vishal"
+    with open("user_info.txt", "w") as f:
+        f.write(f"Name: {name}\n")
     return render_template('index.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -15,11 +17,7 @@ def contact():
         message = request.form['message']
 
         with open("messages.txt", "a", encoding="utf-8") as f:
-            f.write(f"Name: {name})
-Email: {email}
-Message: {message}
----
-")
+            f.write(f"Name: {name}\nEmail: {email}\nMessage: {message}\n---\n")
 
         return f"Thank you, {name}. We received your message."
 

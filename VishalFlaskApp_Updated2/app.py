@@ -6,7 +6,8 @@ app = Flask(__name__)
 def home():
     name = "Vishal"
     with open("user_info.txt", "w") as f:
-        f.write(f"Name: {name}\n")
+        f.write(f"Name: {name}")
+        
     return render_template('index.html')
 
 @app.route('/contact', methods=['GET', 'POST'])

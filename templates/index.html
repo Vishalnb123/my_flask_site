@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCE Digital Business Unit</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .clock-weather {
+            text-align: right;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K1F93QJJB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3K1F93QJJB');
+    </script>
+</head>
+<body>
+    <header>
+        <h1>TCE Digital Business Unit</h1>
+        <div class="clock-weather">
+            <div id="clock"></div>
+            <div id="weather">India Weather: 30°C, Wind: 16 km/h SSE</div>
+        </div>
+    </header>
+    <main style="padding: 20px;">
+        <p>Welcome to the TCE Digital Business Unit website. We deliver cutting-edge digital engineering solutions.</p>
+    </main>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const timeString = now.toLocaleTimeString('en-US', options);
+            document.getElementById('clock').textContent = 'IST Time: ' + timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body>
+</html>

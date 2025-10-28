@@ -15,7 +15,7 @@ def contact():
         message = request.form['message']
 
         with open("messages.txt", "a", encoding="utf-8") as f:
-            f.write(f"Name: {name}
+            f.write(f"Name: {name})
 Email: {email}
 Message: {message}
 ---

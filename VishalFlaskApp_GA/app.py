@@ -15,11 +15,12 @@ def contact():
         message = request.form['message']
 
         with open("messages.txt", "a", encoding="utf-8") as f:
-            f.write(f"Name: {name}
-Email: {email}
-Message: {message}
----
-")
+            f.write(
+                f"Name: {name}\n"
+                f"Email: {email}\n"
+                f"Message: {message}\n"
+                "---\n"
+            )
 
         return f"Thank you, {name}. We received your message."
 
